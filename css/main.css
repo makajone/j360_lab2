@@ -1,0 +1,146 @@
+body {
+	background-image: url(../images/salmon_20%22.jpg);
+    background-repeat: no-repeat;
+	background-size:cover;
+    font: 16px Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+    line-height: 2.5em;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+/* Headers and whatnot*/
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 100;
+	color:#FDF9F9;
+	margin: inherit;
+    width: 18%;
+    padding: 15px;
+}
+
+section h1 {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 4px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+nav li {
+    display: inline-block;
+    margin: 80px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#FDF9F9;
+    font-family: 'Raleway', sans-serif;
+	font-size:21px;
+}
+
+nav a:hover {
+    color: #B7B0B0;
+
+}
+
+/*
+    Container and multi-column layout
+    Assuming a 12-column grid, a col-4 (4 of 12) should
+    create 3 equal sized columns. 4/12 == 1/3
+*/
+
+.container {
+    margin: 10px 4%;
+}
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+}
+.container::after, .row::after {
+    clear: both;
+    display: table;
+}
+.col {
+    float: left;
+    display: block;
+}
+
+.col:last-child {
+    margin: 0;
+}
+
+.col-4 {
+	padding-top: 20px;
+    width: 100%;
+    margin-right: 0;
+}
+
+.col img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: 15px auto;
+    }
+    .col-4 {
+        width: 31.4666667%;
+        margin-right: 2.6666667%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    /*
+        960 - (306*3) - (21*2)
+        306/960 = 31.875%
+        21/960 = 2.1875%
+    */
+    .container {
+        width: 960px;
+        margin: 20px auto 5px;
+    }
+
+    .col-4 {
+        width: 31.875%;
+        margin-right: 2.1875%;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*
+        1000 - (320*3) - (20*2)
+        320/1000 = 32%
+        20/1000 = 2%
+    */
+    .container {
+        width: 1000px;
+        margin: 40px auto 10px;
+    }
+
+    .col-4 {
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    h1 {
+        font-size: 3.75em;
+        font-weight: 200;
+    }
+}
